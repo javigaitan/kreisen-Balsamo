@@ -16,9 +16,9 @@ export function HighlightsSection() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
         
         {/* LEFT: Title */}
-        <div className="w-full lg:w-1/3">
-          <h2 className="text-white text-3xl md:text-5xl leading-tight">
-            Números <br />
+        <div className="w-full lg:w-1/3 text-center lg:text-left">
+<h2 className="text-white text-4xl sm:text-5xl md:text-6xl leading-tight">
+              Números <br />
             <span className="font-bold">
               que nos <br />
               definen
@@ -81,7 +81,7 @@ function AnimatedCircle({
         duration: 0.6,
         ease: "easeOut",
       }}
-      onAnimationComplete={() => setStartCounting(true)} // 👈 cuando termina caída → empieza contador
+      onAnimationComplete={() => setStartCounting(true)} 
       className="bg-white rounded-full flex flex-col items-center justify-center text-center aspect-square p-4 shadow-md"
     >
       <span className="text-[#2358AE] text-2xl md:text-3xl font-bold">

@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from "next/image"
@@ -10,33 +9,37 @@ const slides = [
     desktopImg: "/images/kreisen-bann_frenos.jpg",
     mobileImg: "/images/kreisen-bann_frenos.jpg",
     alt: "KREISEN brake discs",
-    title: "KITS DE\nEMBRAGUES KREISEN",
-    text:
-      ""
+    titleTop: "KITS DE",
+    titleMain: "EMBRAGUES",
+    titleBottom: "KREISEN",
+    text: ""
   },
   {
     desktopImg: "/images/kreisen-bann_meca.jpg",
     mobileImg: "/images/kreisen-bann_meca.jpg",
     alt: "KREISEN MECA",
-    title: "KITS DE\nMECANICA KREISEN",
-    text:
-      ""
+    titleTop: "KITS DE",
+    titleMain: "MECANICA",
+    titleBottom: "KREISEN",
+    text: ""
   },
   {
     desktopImg: "/images/kreisen-bann_refri.jpg",
     mobileImg: "/images/kreisen-bann_refri.jpg",
     alt: "KREISEN cooling parts",
-    title: "KITS DE\REFRIGERANTE KREISEN",
-    text:
-      ""
+    titleTop: "KITS DE",
+    titleMain: "REFRIGERANTE",
+    titleBottom: "KREISEN",
+    text: ""
   },
   {
     desktopImg: "/images/kreisen-bann_trasmision.jpg",
     mobileImg: "/images/kreisen-bann_trasmision.jpg",
-    alt: "KREISEN cooling TRASMISION",
-    title: "KITS DE\nTRASMISION KREISEN",
-    text:
-      ""
+    alt: "KREISEN TRASMISION",
+    titleTop: "KITS DE",
+    titleMain: "TRASMISION",
+    titleBottom: "KREISEN",
+    text: ""
   }
 ]
 
@@ -57,13 +60,11 @@ export function HeroSection() {
     <section className="relative w-full overflow-hidden pt-20 bg-white">
 
       {/* ================= DESKTOP ================= */}
+      <div className="hidden md:flex w-full min-h-[60px] relative">
 
-      <div className="hidden md:flex w-full min-h-[600px] relative">
-
-        {/* imagen LEFT */}
+        {/* IMAGE LEFT */}
         <div className="w-1/2 flex flex-col justify-start pl-24 pr-10 pt-24 relative z-10">
-        <AnimatePresence mode="wait">
-
+          <AnimatePresence mode="wait">
             <motion.div
               key={slide.desktopImg}
               initial={{ opacity: 0, scale: 1.05 }}
@@ -72,7 +73,6 @@ export function HeroSection() {
               transition={{ duration: 0.8 }}
               className="flex justify-end w-full"
             >
-
               <Image
                 src={slide.desktopImg}
                 alt={slide.alt}
@@ -81,19 +81,13 @@ export function HeroSection() {
                 className="object-contain h-full w-auto ml-auto"
                 priority
               />
-
             </motion.div>
-
           </AnimatePresence>
-
-          
         </div>
 
-        {/* text RIGHT */}
-
-        <div className="w-1/2 relative flex justify-end items-center overflow-hidden">
-        <AnimatePresence mode="wait">
-
+        {/* TEXT RIGHT */}
+<div className="w-1/2 relative flex items-center justify-end pr-12 lg:pr-20">
+          <AnimatePresence mode="wait">
             <motion.div
               key={current}
               initial={{ opacity: 0, y: -30 }}
@@ -102,33 +96,39 @@ export function HeroSection() {
               transition={{ duration: 0.8 }}
             >
 
-              <h1 className="text-6xl lg:text-7xl font-heading font-bold uppercase tracking-normal text-[#2358AE] mt-16 mb-16 whitespace-pre-line leading-[0.95]">
-                {slide.title}
+              <h1 className="text-7xl lg:text-7xl font-heading uppercase tracking-normal text-[#2358AE] leading-[0.95]">
+
+                <span className="font-normal block">
+                  {slide.titleTop}
+                </span>
+
+                <span className="font-bold block">
+                  {slide.titleMain}
+                </span>
+
+                <span className="font-bold block">
+                  {slide.titleBottom}
+                </span>
+
               </h1>
 
-              <p className="text-xl lg:text-3xl font-sans text-slate-600 max-w-3xl whitespace-pre-line">
-                {slide.text}
-              </p>
+              {slide.text && (
+                <p className="text-xl lg:text-3xl font-sans text-slate-600 max-w-3xl mt-6 whitespace-pre-line">
+                  {slide.text}
+                </p>
+              )}
 
             </motion.div>
-
           </AnimatePresence>
-
-
-          
-
         </div>
 
       </div>
 
       {/* ================= MOBILE ================= */}
-
       <div className="md:hidden flex flex-col items-center">
 
         <div className="px-6 py-8">
-
           <AnimatePresence mode="wait">
-
             <motion.div
               key={current}
               initial={{ opacity: 0, y: -20 }}
@@ -137,22 +137,33 @@ export function HeroSection() {
               transition={{ duration: 0.8 }}
             >
 
-              <h1 className="text-4xl sm:text-5xl font-heading font-bold uppercase tracking-tight text-[#2358AE] text-center mb-6 whitespace-pre-line">
-                {slide.title}
+              <h1 className="text-5xl m:text-5xl font-heading uppercase tracking-tight text-[#2358AE] text-center mb-6 leading-tight">
+
+                <span className="font-normal block">
+                  {slide.titleTop}
+                </span>
+
+                <span className="font-bold block">
+                  {slide.titleMain}
+                </span>
+
+                <span className="font-bold block">
+                  {slide.titleBottom}
+                </span>
+
               </h1>
 
-              <p className="text-lg sm:text-xl font-sans text-slate-600 text-center max-w-sm mx-auto whitespace-pre-line">
-                {slide.text}
-              </p>
+              {slide.text && (
+                <p className="text-lg sm:text-xl font-sans text-slate-600 text-center max-w-sm mx-auto whitespace-pre-line">
+                  {slide.text}
+                </p>
+              )}
 
             </motion.div>
-
           </AnimatePresence>
-
         </div>
 
         <AnimatePresence mode="wait">
-
           <motion.div
             key={slide.mobileImg}
             initial={{ opacity: 0, scale: 1.05 }}
@@ -160,7 +171,6 @@ export function HeroSection() {
             exit={{ opacity: 0, scale: 1.05 }}
             transition={{ duration: 0.8 }}
           >
-
             <Image
               src={slide.mobileImg}
               alt={slide.alt}
@@ -169,9 +179,7 @@ export function HeroSection() {
               className="w-full h-auto object-contain"
               priority
             />
-
           </motion.div>
-
         </AnimatePresence>
 
       </div>
