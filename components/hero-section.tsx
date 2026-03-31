@@ -96,7 +96,7 @@ export function HeroSection() {
               transition={{ duration: 0.8 }}
             >
 
-              <h1 className="text-7xl lg:text-7xl font-heading uppercase tracking-normal text-[#2358AE] leading-[0.95]">
+              <h1 className="text-8xl lg:text-8xl font-heading uppercase tracking-normal text-[#2358AE] leading-[0.95]">
 
                 <span className="font-normal block">
                   {slide.titleTop}
