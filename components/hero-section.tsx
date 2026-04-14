@@ -57,13 +57,13 @@ export function HeroSection() {
   const slide = slides[current]
 
   return (
-    <section className="relative w-full overflow-hidden pt-20 bg-white">
+    <section className="relative w-full overflow-hidden pt-12 bg-white">
 
       {/* ================= DESKTOP ================= */}
       <div className="hidden md:flex w-full min-h-[60px] relative">
 
         {/* IMAGE LEFT */}
-        <div className="w-1/2 flex flex-col justify-start pl-24 pr-10 pt-24 relative z-10">
+        <div className="w-1/2 flex flex-col justify-start pl-24 pr-10 pt-12 relative z-10">
           <AnimatePresence mode="wait">
             <motion.div
               key={slide.desktopImg}

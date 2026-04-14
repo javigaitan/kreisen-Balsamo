@@ -5,10 +5,10 @@ import { useEffect, useState } from "react"
 
 export function HighlightsSection() {
   const metrics = [
-    { number: 600, label: "Distribuidores" },
-    { number: 7000, label: "Referencias" },
-    { number: 20, label: "Años en el mercado" },
-    { number: 200, label: "Kits propios" },
+    { number: 600, label: "Distribuidores", bg: "más_600_distribuidores.png" },
+    { number: 7000, label: "Referencias", bg: "más_7000_referencias.png" },
+    { number: 20, label: "Años en el mercado", bg: "más_20_años.png" },
+    { number: 200, label: "Kits propios", bg: "más_200_kits.png" },
   ]
 
   return (
@@ -41,6 +41,7 @@ export function HighlightsSection() {
 type Metric = {
   number: number
   label: string
+  bg:string
 }
 
 function AnimatedCircle({
@@ -82,14 +83,18 @@ function AnimatedCircle({
         ease: "easeOut",
       }}
       onAnimationComplete={() => setStartCounting(true)} 
-      className="bg-white rounded-full flex flex-col items-center justify-center text-center aspect-square p-4 shadow-md"
-    >
-      <span className="text-[#2358AE] text-2xl md:text-3xl font-bold">
-        +{count.toLocaleString()}
-      </span>
-      <span className="text-[#2358AE] text-sm md:text-base leading-tight">
-        {item.label}
-      </span>
-    </motion.div>
+className="relative rounded-full flex flex-col items-center justify-center text-center aspect-square p-4 shadow-md bg-cover bg-center overflow-hidden"
+  style={{
+    backgroundImage: `url('/images/${item.bg}')`,
+  }}    >
+      <div className="absolute inset-0 bg-black/30" />
+
+  <span className="relative text-white text-2xl md:text-3xl font-bold">
+    +{count.toLocaleString()}
+  </span>
+  <span className="relative text-white text-sm md:text-base leading-tight">
+    {item.label}
+  </span>
+</motion.div>
   )
 }
