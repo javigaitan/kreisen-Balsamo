@@ -50,7 +50,7 @@ export function ProductFamilySection() {
     image: "/images/familias/kreisen_refrigeración.jpg",
   },
   {
-    name: "SUSPENCIÓN",
+    name: "SUSPENSIÓN",
     image: "/images/familias/kreisen_suspensión.jpg",
   },
   {
