@@ -125,7 +125,7 @@ export function HeroSection() {
       </div>
 
       {/* ================= MOBILE ================= */}
-      <div className="md:hidden flex flex-col items-center">
+      <div className="md:hidden flex flex-col items-center pt-12">
 
         <div className="px-6 py-8">
           <AnimatePresence mode="wait">
