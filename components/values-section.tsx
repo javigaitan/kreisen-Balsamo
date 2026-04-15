@@ -28,12 +28,15 @@ export function ValuesSection() {
       title: "SEGURIDAD",
       subtitle: "Respaldo garantizado",
       description:
-        "Ofrecemos repuestos alternativos confiables. Con Kreisen, tenés la tranquilidad de com",
+        "Ofrecemos repuestos alternativos confiables. Con Kreisen, tenés la tranquilidad de comprar seguro.",
     },
   ]
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage: "url('/images/bg-kreisen-values-orange.jpeg')",
+  }}>
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {values.map((value, index) => {
@@ -48,7 +51,7 @@ export function ValuesSection() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-[#2358AE] mb-1">{value.title}</h3>
-                    <p className="text-white font-semibold mb-3">{value.subtitle}</p>
+                    <p className="text-[#2358AE] font-semibold mb-3">{value.subtitle}</p>
                     <p className="text-[#2358AE] text-l leading-relaxed">{value.description}</p>
                   </div>
                 </div>

@@ -6,26 +6,26 @@ import { motion, AnimatePresence } from "framer-motion"
 
 const slides = [
   {
-    desktopImg: "/images/kreisen-bann_frenos.jpg",
-    mobileImg: "/images/kreisen-bann_frenos.jpg",
+    desktopImg: "/images/kreisen-bann_frenos.jpeg",
+    mobileImg: "/images/kreisen-bann_frenos.jpeg",
     alt: "KREISEN brake discs",
-    titleTop: "KITS DE EMBRAGUES",
+    titleTop: "KITS DE FRENOS",
     titleMain: "",
     titleBottom: "KREISEN",
     text: ""
   },
   {
-    desktopImg: "/images/kreisen-bann_meca.jpg",
-    mobileImg: "/images/kreisen-bann_meca.jpg",
+    desktopImg: "/images/kreisen-bann_embra.jpeg",
+    mobileImg: "/images/kreisen-bann_embra.jpeg",
     alt: "KREISEN MECA",
-    titleTop: "KITS DE MECÁNICA",
+    titleTop: "KITS DE EMBRAGUE",
     titleMain: "",
     titleBottom: "KREISEN",
     text: ""
   },
   {
-    desktopImg: "/images/kreisen-bann_refri.jpg",
-    mobileImg: "/images/kreisen-bann_refri.jpg",
+    desktopImg: "/images/kreisen-bann_refri.jpeg",
+    mobileImg: "/images/kreisen-bann_refri.jpeg",
     alt: "KREISEN cooling parts",
     titleTop: "KITS DE REFRIGERANTE",
     titleMain: "",
@@ -33,8 +33,8 @@ const slides = [
     text: ""
   },
   {
-    desktopImg: "/images/kreisen-bann_trasmision.jpg",
-    mobileImg: "/images/kreisen-bann_trasmision.jpg",
+    desktopImg: "/images/kreisen-bann_trasmision.jpeg",
+    mobileImg: "/images/kreisen-bann_trasmision.jpeg",
     alt: "KREISEN TRANSMISIÓN",
     titleTop: "KITS DE TRANSMISIÓN",
     titleMain: "",
@@ -63,7 +63,7 @@ export function HeroSection() {
       <div className="hidden md:flex w-full min-h-[60px] relative">
 
         {/* IMAGE LEFT */}
-        <div className="w-1/2 flex flex-col justify-start pl-24 pr-10 pt-3 relative z-10">
+        <div className="w-1/2 flex flex-col justify-start pl-24 pr-10 pt-16 relative z-10">
           <AnimatePresence mode="wait">
             <motion.div
               key={slide.desktopImg}

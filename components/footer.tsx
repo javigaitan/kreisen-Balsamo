@@ -60,8 +60,8 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-[#FFD700] mt-0.5 flex-shrink-0" />
                 <div className="text-white text-lg">
-                  <p>Córdoba</p>
-                  <p>Argentina</p>
+                  <p>Córdoba, Argentina</p>
+                  <p></p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
@@ -111,7 +111,7 @@ export function Footer() {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h3 className="text-xl font-semibold text-white mb-4 uppercase">Síguenos</h3>
+            <h3 className="text-xl font-semibold text-white mb-4 uppercase">Seguinos</h3>
             <div className="flex space-x-4 mb-6">
               {socialLinks.map((social) => {
                 const Icon = social.icon

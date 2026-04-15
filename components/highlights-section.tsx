@@ -89,10 +89,14 @@ className="relative rounded-full flex flex-col items-center justify-center text-
   }}    >
       <div className="absolute inset-0 bg-black/30" />
 
-  <span className="relative text-white text-2xl md:text-3xl font-bold">
-    +{count.toLocaleString()}
+  <span className="relative text-white text-3xl md:text-lg font-bold">
+    más
+    <br/>
+    <span className="relative text-white text-3xl md:text-5xl">
+    {count.toLocaleString()}
+    </span>
   </span>
-  <span className="relative text-white text-sm md:text-base leading-tight">
+  <span className="relative text-white text-sm md:lg leading-tight font-bold">
     {item.label}
   </span>
 </motion.div>
