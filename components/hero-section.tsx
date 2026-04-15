@@ -12,7 +12,8 @@ const slides = [
     titleTop: "KITS DE FRENOS",
     titleMain: "",
     titleBottom: "KREISEN",
-    text: ""
+    text: "",
+    reverse: false
   },
   {
     desktopImg: "/images/kreisen-bann_embra.jpeg",
@@ -21,7 +22,8 @@ const slides = [
     titleTop: "KITS DE EMBRAGUE",
     titleMain: "",
     titleBottom: "KREISEN",
-    text: ""
+    text: "",
+    reverse: true
   },
   {
     desktopImg: "/images/kreisen-bann_refri.jpeg",
@@ -30,7 +32,8 @@ const slides = [
     titleTop: "KITS DE REFRIGERANTE",
     titleMain: "",
     titleBottom: "KREISEN",
-    text: ""
+    text: "",
+    reverse: false
   },
   {
     desktopImg: "/images/kreisen-bann_trasmision.jpeg",
@@ -39,7 +42,18 @@ const slides = [
     titleTop: "KITS DE TRANSMISIÓN",
     titleMain: "",
     titleBottom: "KREISEN",
-    text: ""
+    text: "",
+    reverse: true
+  },
+  {
+    desktopImg: "/images/kreisen-bann.jpeg",
+    mobileImg: "/images/kreisen-bann.jpeg",
+    alt: "KREISEN TRANSMISIÓN",
+    titleTop: "",
+    titleMain: "El especialista en piezas para vehículos Volkswagen es ",
+    titleBottom: "KREISEN",
+    text: "",
+    reverse: false
   }
 ]
 
@@ -55,74 +69,82 @@ export function HeroSection() {
   }, [])
 
   const slide = slides[current]
-
+const isReversed = slide.reverse
   return (
     <section className="relative w-full overflow-hidden pt-6 bg-white">
 
-      {/* ================= DESKTOP ================= */}
-      <div className="hidden md:flex w-full min-h-[60px] relative">
+    {/* ================= DESKTOP ================= */}
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={current}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+        className={`hidden md:flex w-full min-h-[60px] relative ${
+          isReversed ? "flex-row-reverse" : ""
+        }`}
+      >
 
-        {/* IMAGE LEFT */}
-        <div className="w-1/2 flex flex-col justify-start pl-24 pr-10 pt-16 relative z-10">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={slide.desktopImg}
-              initial={{ opacity: 0, scale: 1.05 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 1.05 }}
-              transition={{ duration: 0.8 }}
-              className="flex justify-end w-full"
-            >
-              <Image
-                src={slide.desktopImg}
-                alt={slide.alt}
-                width={1200}
-                height={800}
-                className="object-contain h-full w-auto ml-auto"
-                priority
-              />
-            </motion.div>
-          </AnimatePresence>
+        {/* IMAGE */}
+        <div
+          className={`w-1/2 flex flex-col justify-start pt-16 relative z-10 ${
+            isReversed ? "pr-24 pl-10" : "pl-24 pr-10"
+          }`}
+        >
+          <motion.div
+            initial={{ opacity: 0, x: isReversed ? 50 : -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9 }}
+            className="flex justify-end w-full"
+          >
+            <Image
+              src={slide.desktopImg}
+              alt={slide.alt}
+              width={1200}
+              height={800}
+              className="object-contain h-full w-auto ml-auto"
+              priority
+            />
+          </motion.div>
         </div>
 
-        {/* TEXT RIGHT */}
-<div className="w-1/2 relative flex items-center justify-end pr-3 lg:pr-20">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={current}
-              initial={{ opacity: 0, y: -30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
-              transition={{ duration: 0.8 }}
-            >
+        {/* TEXT */}
+        <div
+          className={`w-1/2 relative flex items-center ${
+            isReversed ? "justify-start pl-3 lg:pl-20" : "justify-end pr-3 lg:pr-20"
+          }`}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-8xl lg:text-8xl font-heading uppercase tracking-normal text-[#2358AE] leading-[0.95]">
+              <span className="font-normal block">
+                {slide.titleTop}
+              </span>
 
-              <h1 className="text-8xl lg:text-8xl font-heading uppercase tracking-normal text-[#2358AE] leading-[0.95]">
+              <span className="text-base text-6xl lg:text-6xl block">
+                {slide.titleMain}
+              </span>
 
-                <span className="font-normal block">
-                  {slide.titleTop}
-                </span>
+              <span className="font-bold block">
+                {slide.titleBottom}
+              </span>
+            </h1>
 
-                <span className="font-bold block">
-                  {slide.titleMain}
-                </span>
-
-                <span className="font-bold block">
-                  {slide.titleBottom}
-                </span>
-
-              </h1>
-
-              {slide.text && (
-                <p className="text-xl lg:text-3xl font-sans text-slate-600 max-w-3xl mt-6 whitespace-pre-line">
-                  {slide.text}
-                </p>
-              )}
-
-            </motion.div>
-          </AnimatePresence>
+            {slide.text && (
+              <p className="text-xl lg:text-3xl font-sans text-slate-600 max-w-3xl mt-6 whitespace-pre-line">
+                {slide.text}
+              </p>
+            )}
+          </motion.div>
         </div>
 
-      </div>
+      </motion.div>
+    </AnimatePresence>
+
 
       {/* ================= MOBILE ================= */}
       <div className="md:hidden flex flex-col items-center pt-12">

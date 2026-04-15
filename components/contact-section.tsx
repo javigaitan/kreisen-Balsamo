@@ -166,7 +166,7 @@ const onSubmitCompany = async (data: CompanyFormData) => {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance uppercase">Contactanos</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance uppercase">Contáctanos</h2>
               <p className="text-lg text-muted-foreground text-balance">
                 Estamos aquí para ayudarte. Elige la opción que mejor se adapte a tu perfil y nos pondremos en contacto
                 contigo.

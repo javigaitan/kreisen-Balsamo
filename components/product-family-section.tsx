@@ -37,7 +37,7 @@ const products = [
     image: "/images/familias/kreisen_kits.jpg",
   },
   {
-    name: "LUBRICANTES",
+    name: "LUBRICACIÓN",
     image: "/images/familias/kreisen_lubricación.jpg",
   },
   {
