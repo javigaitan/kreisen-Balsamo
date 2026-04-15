@@ -35,9 +35,9 @@ const slides = [
   {
     desktopImg: "/images/kreisen-bann_trasmision.jpg",
     mobileImg: "/images/kreisen-bann_trasmision.jpg",
-    alt: "KREISEN TRASMISION",
+    alt: "KREISEN TRANSMISIÓN",
     titleTop: "KITS DE",
-    titleMain: "TRASMISION",
+    titleMain: "TRANSMISIÓN",
     titleBottom: "KREISEN",
     text: ""
   }
@@ -57,13 +57,13 @@ export function HeroSection() {
   const slide = slides[current]
 
   return (
-    <section className="relative w-full overflow-hidden pt-12 bg-white">
+    <section className="relative w-full overflow-hidden pt-6 bg-white">
 
       {/* ================= DESKTOP ================= */}
       <div className="hidden md:flex w-full min-h-[60px] relative">
 
         {/* IMAGE LEFT */}
-        <div className="w-1/2 flex flex-col justify-start pl-24 pr-10 pt-12 relative z-10">
+        <div className="w-1/2 flex flex-col justify-start pl-24 pr-10 pt-3 relative z-10">
           <AnimatePresence mode="wait">
             <motion.div
               key={slide.desktopImg}
@@ -86,7 +86,7 @@ export function HeroSection() {
         </div>
 
         {/* TEXT RIGHT */}
-<div className="w-1/2 relative flex items-center justify-end pr-12 lg:pr-20">
+<div className="w-1/2 relative flex items-center justify-end pr-3 lg:pr-20">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}

@@ -7,16 +7,15 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 export function ProductFamilySection() {
   const [currentPage, setCurrentPage] = useState(0)
 
-  const products = [
-    {
-    name: "CABLES ",
+const products = [
+  {
+    name: "CABLES",
     image: "/images/familias/kreisen_cables.jpg",
   },
-   {
-    name: "CARROCERIA",
+  {
+    name: "CARROCERÍA",
     image: "/images/familias/kreisen_carroceria.jpg",
   },
-  
   {
     name: "ELECTRICIDAD",
     image: "/images/familias/kreisen_electrico.jpg",
@@ -29,7 +28,7 @@ export function ProductFamilySection() {
     name: "FRENOS",
     image: "/images/familias/kreisen_frenos.jpg",
   },
- {
+  {
     name: "JUNTAS",
     image: "/images/familias/kreisen_juntas.jpg",
   },
@@ -38,7 +37,7 @@ export function ProductFamilySection() {
     image: "/images/familias/kreisen_kits.jpg",
   },
   {
-    name: "LUBRICANTE",
+    name: "LUBRICANTES",
     image: "/images/familias/kreisen_lubricación.jpg",
   },
   {
@@ -54,10 +53,10 @@ export function ProductFamilySection() {
     image: "/images/familias/kreisen_suspensión.jpg",
   },
   {
-    name: "TRASMISIÓN",
+    name: "TRANSMISIÓN",
     image: "/images/familias/kreisen_transmisión.jpg",
   },
-  ]
+]
 
   const itemsPerPage = 3
   const totalPages = Math.ceil(products.length / itemsPerPage)
