@@ -18,9 +18,9 @@ export function HighlightsSection() {
         {/* LEFT: Title */}
         <div className="w-full lg:w-1/3 text-center lg:text-left">
 <h2 className="text-white text-4xl sm:text-5xl md:text-6xl leading-tight">
-              Números <br />
+              Números que <br />
             <span className="font-bold">
-              que nos <br />
+               nos 
               definen
             </span>
           </h2>

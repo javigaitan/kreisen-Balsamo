@@ -48,7 +48,7 @@ export function Navbar() {
               asChild
               className="bg-[] hover:bg-[#2358AE] hover:text[#F59D02] text-2xl cursor-pointer text-white  font-bold transition-colors"
             >
-              <Link href="#contacto">CONTACTANOS</Link>
+              <Link href="#contacto">CONTÁCTANOS</Link>
             </Button>
             
           </div>

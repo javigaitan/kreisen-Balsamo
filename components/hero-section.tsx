@@ -9,8 +9,8 @@ const slides = [
     desktopImg: "/images/kreisen-bann_frenos.jpg",
     mobileImg: "/images/kreisen-bann_frenos.jpg",
     alt: "KREISEN brake discs",
-    titleTop: "KITS DE",
-    titleMain: "EMBRAGUES",
+    titleTop: "KITS DE EMBRAGUES",
+    titleMain: "",
     titleBottom: "KREISEN",
     text: ""
   },
@@ -18,8 +18,8 @@ const slides = [
     desktopImg: "/images/kreisen-bann_meca.jpg",
     mobileImg: "/images/kreisen-bann_meca.jpg",
     alt: "KREISEN MECA",
-    titleTop: "KITS DE",
-    titleMain: "MECANICA",
+    titleTop: "KITS DE MECÁNICA",
+    titleMain: "",
     titleBottom: "KREISEN",
     text: ""
   },
@@ -27,8 +27,8 @@ const slides = [
     desktopImg: "/images/kreisen-bann_refri.jpg",
     mobileImg: "/images/kreisen-bann_refri.jpg",
     alt: "KREISEN cooling parts",
-    titleTop: "KITS DE",
-    titleMain: "REFRIGERANTE",
+    titleTop: "KITS DE REFRIGERANTE",
+    titleMain: "",
     titleBottom: "KREISEN",
     text: ""
   },
@@ -36,8 +36,8 @@ const slides = [
     desktopImg: "/images/kreisen-bann_trasmision.jpg",
     mobileImg: "/images/kreisen-bann_trasmision.jpg",
     alt: "KREISEN TRANSMISIÓN",
-    titleTop: "KITS DE",
-    titleMain: "TRANSMISIÓN",
+    titleTop: "KITS DE TRANSMISIÓN",
+    titleMain: "",
     titleBottom: "KREISEN",
     text: ""
   }
