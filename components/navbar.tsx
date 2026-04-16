@@ -26,9 +26,16 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20 font-heading font-bold uppercase tracking-normal">
-          <Link href="/" className="relative h-23 w-50 lg:w-95">
-            <Image src="/images/marca-kreisen-blanca.png" alt="Kreisen Logo" fill className="object-contain" priority />
-          </Link>
+          <Link href="/" >
+  <Image
+  src="/images/k_kreisen.svg"
+  alt="Kreisen Logo"
+  width={220}
+  height={80}
+  className="h-16 md:h-18 lg:h-90 w-auto"
+  priority
+/>
+</Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
