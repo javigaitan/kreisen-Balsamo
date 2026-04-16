@@ -43,7 +43,7 @@ export function Footer() {
           >
             {/* Company Logo */}
             <div className="inline-block">
-              <img src="/images/marca-kreisen-blanca.png" alt="Aequipe" className="h-18 w-auto" />
+              <img src="/images/marca-kreisen-blanca.png" alt="Aequipe" className="h-20 w-auto" />
             </div>
           </motion.div>
 

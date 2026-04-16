@@ -6,6 +6,16 @@ import { motion, AnimatePresence } from "framer-motion"
 
 const slides = [
   {
+    desktopImg: "/images/kreisen-bann.jpeg",
+    mobileImg: "/images/kreisen-bann.jpeg",
+    alt: "KREISEN TRANSMISIÓN",
+    titleTop: "",
+    titleMain: "El especialista en piezas para vehículos Volkswagen es ",
+    titleBottom: "KREISEN",
+    text: "",
+    reverse: false
+  },
+  {
     desktopImg: "/images/kreisen-bann_frenos.jpeg",
     mobileImg: "/images/kreisen-bann_frenos.jpeg",
     alt: "KREISEN brake discs",
@@ -44,17 +54,8 @@ const slides = [
     titleBottom: "KREISEN",
     text: "",
     reverse: true
-  },
-  {
-    desktopImg: "/images/kreisen-bann.jpeg",
-    mobileImg: "/images/kreisen-bann.jpeg",
-    alt: "KREISEN TRANSMISIÓN",
-    titleTop: "",
-    titleMain: "El especialista en piezas para vehículos Volkswagen es ",
-    titleBottom: "KREISEN",
-    text: "",
-    reverse: false
   }
+  
 ]
 
 export function HeroSection() {
