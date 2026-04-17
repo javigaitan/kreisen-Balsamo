@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { MapPin, Phone, Mail, Facebook, Instagram, } from "lucide-react"
+import Image from "next/image"
 
 const brandLogos = [
   { name: "Aequipe", src: "/images/marca-aequipe.png" },
@@ -42,9 +43,18 @@ export function Footer() {
             className="space-y-4"
           >
             {/* Company Logo */}
-            <div className="inline-block">
-              <img src="/images/marca-kreisen-blanca.png" alt="Aequipe" className="h-22 w-auto" />
-            </div>
+            <div className="relative h-16 md:h-20 lg:h-24 w-auto">
+  <div className="flex flex-col items-start">
+  <Image
+    src="/images/kreisen-logo.svg"
+    alt="Kreisen Logo"
+    width={500}
+    height={180}
+    className="h-20 md:h-24 lg:h-38 w-auto "
+    priority
+  />
+</div>
+</div>
           </motion.div>
 
           {/* Contact Information */}
