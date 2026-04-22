@@ -50,7 +50,7 @@ export function Footer() {
     alt="Kreisen Logo"
     width={500}
     height={180}
-    className="h-20 md:h-24 lg:h-38 w-auto "
+    className="h-12 md:h-24 lg:h-38 w-auto "
     priority
   />
 </div>

@@ -19,7 +19,7 @@ const slides = [
     desktopImg: "/images/kreisen-bann_frenos.jpeg",
     mobileImg: "/images/kreisen-bann_frenos.jpeg",
     alt: "KREISEN brake discs",
-    titleTop: "KITS DE FRENOS",
+    titleTop: "Todo para frenar seguro, lo tenés en",
     titleMain: "",
     titleBottom: "KREISEN",
     text: "",
@@ -29,7 +29,7 @@ const slides = [
     desktopImg: "/images/kreisen-bann_embra.jpeg",
     mobileImg: "/images/kreisen-bann_embra.jpeg",
     alt: "KREISEN MECA",
-    titleTop: "KITS DE EMBRAGUE",
+    titleTop: "La fuerza de tu Volkswagen empieza en",
     titleMain: "",
     titleBottom: "KREISEN",
     text: "",
@@ -39,7 +39,7 @@ const slides = [
     desktopImg: "/images/kreisen-bann_refri.jpeg",
     mobileImg: "/images/kreisen-bann_refri.jpeg",
     alt: "KREISEN cooling parts",
-    titleTop: "KITS DE REFRIGERANTE",
+    titleTop: "En refrigeración, cuidá tu motor con",
     titleMain: "",
     titleBottom: "KREISEN",
     text: "",
@@ -121,7 +121,7 @@ const isReversed = slide.reverse
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-8xl lg:text-8xl font-heading uppercase tracking-normal text-[#2358AE] leading-[0.95]">
+            <h1 className="text-8xl lg:text-7xl font-heading uppercase tracking-normal text-[#2358AE] leading-[0.85]">
               <span className="font-normal block">
                 {slide.titleTop}
               </span>

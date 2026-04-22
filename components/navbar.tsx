@@ -32,7 +32,7 @@ export function Navbar() {
   alt="Kreisen Logo"
   width={220}
   height={80}
-  className="h-16 md:h-18 lg:h-90 w-auto"
+  className="h-40 md:h-18 lg:h-90 w-auto"
   priority
 />
 </Link>
