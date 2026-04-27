@@ -15,6 +15,7 @@ import emailjs from "@emailjs/browser"
 type FormType = "customer" | "company"
 
 interface CustomerFormData {
+    from_name:string
   name: string
   email: string
   phone: string
@@ -91,7 +92,9 @@ const [formType, setFormType] = useState<FormType>("customer")
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
       { 
         ...data, 
-        form_type: "Consumidor Final"
+        form_type: "Consumidor Final",
+        from_name:"Balsamo"
+
       },
       process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
     )
@@ -126,7 +129,8 @@ const onSubmitCompany = async (data: CompanyFormData) => {
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
       { 
         ...data, 
-        form_type: "Empresa"
+        form_type: "Empresa",
+        from_name:"Balsamo"
       },
       process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
     )
