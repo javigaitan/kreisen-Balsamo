@@ -15,7 +15,7 @@ import emailjs from "@emailjs/browser"
 type FormType = "customer" | "company"
 
 interface CustomerFormData {
-    from_name:string
+  from_name:string
   name: string
   email: string
   phone: string
@@ -93,7 +93,7 @@ const [formType, setFormType] = useState<FormType>("customer")
       { 
         ...data, 
         form_type: "Consumidor Final",
-        from_name:"Balsamo"
+        from_name:"Kreisen"
 
       },
       process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
@@ -130,7 +130,7 @@ const onSubmitCompany = async (data: CompanyFormData) => {
       { 
         ...data, 
         form_type: "Empresa",
-        from_name:"Balsamo"
+        from_name:"Kreisen"
       },
       process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
     )
