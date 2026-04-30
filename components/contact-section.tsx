@@ -486,7 +486,7 @@ const onSubmitCompany = async (data: CompanyFormData) => {
                       <SelectValue placeholder="Seleccionar opción" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="yes">Sí, tengo un taller de repuestos</SelectItem>
+                      <SelectItem value="yes">Sí, tengo una casa de repuestos</SelectItem>
                       <SelectItem value="planning">No, pero planeo abrir uno</SelectItem>
                       <SelectItem value="other">Otro</SelectItem>
                     </SelectContent>
